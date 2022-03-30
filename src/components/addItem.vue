@@ -17,7 +17,7 @@
         placeholder="点击选择日期"
         @click="showCalendar = true"
       />
-      <van-calendar v-model="showCalendar" @confirm="onConfirm" />
+      <van-calendar v-model="showCalendar" color="#07c160" @confirm="onConfirm" />
       <div style="margin: 16px">
         <van-button round block type="primary" native-type="submit"
           >提交</van-button

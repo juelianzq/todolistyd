@@ -1,14 +1,13 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import todoList from '@/views/todoList.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'todoList',
-    component: todoList
+    name: 'login',
+    component: ()=>import('../views/login.vue')
   },
   {
     path: '/todoList',
@@ -17,6 +16,11 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/todoList.vue')
+  },
+  {
+    path:'/login',
+    name:'login',
+    component:()=>import('../views/login.vue')
   }
 ]
 

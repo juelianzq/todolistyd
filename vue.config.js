@@ -1,3 +1,4 @@
+const { defineConfig } = require('@vue/cli-service')
 module.exports = {
     publicPath: './',
     // productionSourceMap: false,
@@ -15,3 +16,6 @@ module.exports = {
 //         }
 //     }
 }
+module.exports = defineConfig({
+    lintOnSave:false
+   })
