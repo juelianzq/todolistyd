@@ -1,6 +1,6 @@
-// module.exports = {
-//     publicPath: './',
-//     productionSourceMap: false,
+module.exports = {
+    publicPath: './',
+    // productionSourceMap: false,
 //     devServer: {
 //         proxy: {
 //             '/api': {     //这里最好有一个 /
@@ -14,4 +14,4 @@
 //             }
 //         }
 //     }
-// }
+}
