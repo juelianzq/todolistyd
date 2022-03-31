@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import { Form, Field, Calendar, Button, CellGroup } from "vant";
 export default {
 
 }

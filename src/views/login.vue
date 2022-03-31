@@ -20,13 +20,13 @@
           />
         </van-cell-group>
         <div style="margin: 16px" class="loginBtn">
-          <van-button round block type="primary" native-type="submit">
+          <van-button round block type="primary" native-type="submit" class="hvr-pop">
             登录
           </van-button>
         </div>
       </van-form>
       <div class="registerBtn">
-        <van-button round block color="#e5bf99" @click="register()">
+        <van-button round block color="#e5bf99" @click="register()" class="hvr-pop">
           注册
         </van-button>
       </div>
@@ -56,7 +56,9 @@ export default {
     onSubmit() {
       console.log(this.form);
     },
-    register() {},
+    register() {
+      this.$router.push({path:'/register'})
+    },
   },
 };
 </script>
