@@ -6,6 +6,8 @@
         name="item"
         label="内容"
         placeholder="要完成的事情"
+        type="textarea"
+        autosize
         :rules="[{ required: true, message: '请填写想要做的事情哦！' }]"
       ></van-field>
       <van-field

@@ -150,7 +150,7 @@ export default {
 <style lang='scss' scoped>
 ::v-deep {
   .van-cell {
-    line-height: 20px;
+    line-height: 30px;
     font-size: 22px;
     text-align: left;
     padding-left: 30px;
