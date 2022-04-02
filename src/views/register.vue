@@ -23,6 +23,7 @@
           readonly
           label="密保"
           placeholder="请选择密保问题"
+          :rules="[{ required: true, message: '请选择问题' }]"
           @click="showPicker = true"
         />
         <van-field
@@ -31,6 +32,7 @@
           name="密保答案"
           label="密保答案"
           placeholder="请输入密保答案"
+          :rules="[{ required: true, pattern, message: '请填写正确答案' }]"
         />
         <van-popup v-model="showPicker" round position="bottom">
           <van-picker
@@ -78,7 +80,15 @@ export default {
         passwordProtect: "",
         answer: "",
       },
+      pattern:null
     };
+  },
+  watch:{
+    'form.passwordProtect'(value){
+      if(value.value == 1){
+        this.pattern = /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])d{8}$/
+      }
+    }
   },
   methods: {
     onSubmit() {},
@@ -115,7 +125,7 @@ export default {
       }
     }
   }
-  .backLogin{
+  .backLogin {
     text-align: right;
     padding-right: 50px;
     color: #027620;
